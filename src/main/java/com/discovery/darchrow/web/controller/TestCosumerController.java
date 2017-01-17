@@ -18,6 +18,8 @@ package com.discovery.darchrow.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,7 +33,7 @@ import com.discovery.darchrow.tools.jsonlib.JsonUtil;
 @Controller
 public class TestCosumerController {
 
-//	private static final Logger log = LoggerFactory.getLogger(TestCosumerController.class);
+	private static final Logger log = LoggerFactory.getLogger(TestCosumerController.class);
 	
 	@Autowired
 	private DemoUserService demoUserService;
@@ -42,6 +44,8 @@ public class TestCosumerController {
 	
 	@RequestMapping(value = "/testquery.htm", method = RequestMethod.GET)
 	public String testquery(HttpServletRequest request, Model model) {
+		
+		log.debug("-----------------------TestCosumerController-------------------------");
 		
 		model.addAttribute("user", JsonUtil.format(demoUserService.findById(327)));
 		
