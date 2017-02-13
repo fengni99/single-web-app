@@ -26,7 +26,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.discovery.darchrow.sec.api.DemoItemService;
+//import com.discovery.darchrow.sec.api.DemoItemService;
 import com.discovery.darchrow.single.api.DemoUserService;
 import com.discovery.darchrow.tools.jsonlib.JsonUtil;
 
@@ -38,8 +38,8 @@ public class TestCosumerController {
 	@Autowired
 	private DemoUserService demoUserService;
 	
-	@Autowired
-	private DemoItemService demoItemService;
+	/*@Autowired
+	private DemoItemService demoItemService;*/
 	
 	
 	@RequestMapping(value = "/testquery.htm", method = RequestMethod.GET)
@@ -49,7 +49,7 @@ public class TestCosumerController {
 		
 		model.addAttribute("user", JsonUtil.format(demoUserService.findById(327)));
 		
-		model.addAttribute("item", JsonUtil.format(demoItemService.findById(1)));
+//		model.addAttribute("item", JsonUtil.format(demoItemService.findById(1)));
 		
 		return "test/testquery";
 	}

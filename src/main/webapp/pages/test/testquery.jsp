@@ -9,6 +9,6 @@ ${user }
 <br/>
 <br/>
 <br/>
-${item }
+<%-- ${item } --%>
 </body>
 </html>
