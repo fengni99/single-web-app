@@ -42,7 +42,7 @@
 
 	<!-- end -->
 	<import resource="classpath*:spring/spring-resolver.xml" />
-	<import resource="classpath*:spring/spring-cache.xml" />
+	<!-- <import resource="classpath*:spring/spring-cache.xml" /> -->
 	<import resource="classpath*:spring/spring-context.xml" />
 	<import resource="classpath*:spring/spring-dao.xml" />
 

@@ -47,7 +47,7 @@ public class TestCosumerController {
 		
 		log.debug("-----------------------TestCosumerController-------------------------");
 		
-		model.addAttribute("user", JsonUtil.format(demoUserService.findById(327)));
+		model.addAttribute("user", JsonUtil.format(demoUserService.findById(1)));
 		
 //		model.addAttribute("item", JsonUtil.format(demoItemService.findById(1)));
 		
